@@ -1,0 +1,21 @@
+applications:
+-
+  name: iot-simulator-api
+  memory: 128M
+  buildpack: https://github.com/cloudfoundry/buildpack-nodejs.git
+  host: iot-simulator-api-<<YOUR-NAME>>
+#  command: npm start
+#  timeout: 60
+#  env:
+#    NODE_ENV: production
+#  services:
+#   - mongodb-instance
+#  path: ./public
+#  host: iot-application-api-server
+#  domain: company.com
+#  inherit: inherited.yml
+#  random-route: true
+#  routes:
+#  - route: example.com
+#  - route: www.example.com/foo
+#  - route: tcp-example.com:1234

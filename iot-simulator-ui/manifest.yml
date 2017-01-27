@@ -1,0 +1,8 @@
+applications:
+-
+  name: iot-simulator-ui
+  memory: 64M
+  random-route: true
+  buildpack: https://github.com/cloudfoundry/staticfile-buildpack.git
+  path: ./dist
+  host: iot-simulator-ui-<<YOUR-NAME>>

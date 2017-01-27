@@ -1,0 +1,31 @@
+{
+  "name": "iot-simulator-api",
+  "version": "1.0.0",
+  "description": "Save new measurements from devices to database, send to users existing data in real time.",
+  "author": "Eugene Melnikov <eugeny.m@altoros.com>",
+  "private": true,
+  "scripts": {
+    "dev": "babel-watch --watch .env src/index.js",
+    "build": "rimraf dist && mkdir dist && babel -d ./dist ./src -s inline",
+    "start": "node dist/index.js"
+  },
+  "dependencies": {
+    "ajv": "4.11.2",
+    "babel-runtime": "6.22.0",
+    "dotenv": "4.0.0",
+    "mongodb": "2.2.22",
+    "ws": "1.1.1"
+  },
+  "devDependencies": {
+    "babel-cli": "^6.18.0",
+    "babel-plugin-transform-runtime": "^6.15.0",
+    "babel-preset-es2015": "^6.18.0",
+    "babel-preset-es2017": "^6.16.0",
+    "babel-watch": "^2.0.5",
+    "rimraf": "^2.5.4"
+  },
+  "engines": {
+    "node": "6.9.4",
+    "npm": "4.0.5"
+  }
+}
