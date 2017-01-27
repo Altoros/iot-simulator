@@ -1,6 +1,5 @@
 <template>
   <div>
-    <h3>Measurements</h3>
     <div v-for='measurement in measurements'>
       <pre>{{measurement}}</pre>
     </div>
@@ -34,4 +33,11 @@ export default {
 </script>
 
 <style scoped>
+pre {
+  display: inline-block;
+  background-color: #FFFFFF;
+  border-radius: 5px;
+  padding: 10px;
+  margin: 10px;
+}
 </style>
