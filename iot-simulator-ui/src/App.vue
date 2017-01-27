@@ -11,14 +11,7 @@ import Measurements from './components/Measurements'
 
 export default {
   name: 'app',
-  components: { Sender, Measurements },
-  data () {
-    return {
-
-    }
-  },
-  methods: {
-  }
+  components: { Sender, Measurements }
 }
 </script>
 

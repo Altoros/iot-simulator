@@ -9,25 +9,25 @@
 <script>
 export default {
   created () {
-    this.createConnection();
+    this.createConnection()
   },
   data () {
     return {
       socket: null,
-      measurements: [],
+      measurements: []
     }
   },
   methods: {
     createConnection () {
-      this.socket = new WebSocket(process.env.API_URL);
+      this.socket = new window.WebSocket(process.env.API_URL)
       this.socket.onclose = () => {
-        this.createConnection();
-      };
-      this.socket.onmessage = this.onMessage;
+        this.createConnection()
+      }
+      this.socket.onmessage = this.onMessage
     },
     onMessage (msg) {
-      this.measurements.unshift(JSON.parse(msg.data));
-    },
+      this.measurements.unshift(JSON.parse(msg.data))
+    }
   }
 }
 </script>

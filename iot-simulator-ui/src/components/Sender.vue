@@ -8,26 +8,26 @@
 <script>
 export default {
   created () {
-    this.createConnection();
+    this.createConnection()
   },
   data () {
     return {
       socket: null,
-      measurement: 0,
+      measurement: 0
     }
   },
   methods: {
     createConnection () {
-      this.socket = new WebSocket(process.env.API_URL);
+      this.socket = new window.WebSocket(process.env.API_URL)
       this.socket.onclose = () => {
-        this.createConnection();
-      };
+        this.createConnection()
+      }
     },
     save (e) {
       try {
-        this.socket.send(JSON.stringify({ a: this.measurement }));
+        this.socket.send(JSON.stringify({ a: this.measurement }))
       } catch (e) {
-        alert('Failed to save');
+        window.alert('Failed to save')
       }
     }
   }
