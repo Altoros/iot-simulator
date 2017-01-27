@@ -1,6 +1,6 @@
 <template>
   <form v-on:submit.prevent='save'>
-    <input name='a' v-model='measurement' type='number'></label>
+    <label>Measurement A: <input name='a' v-model='measurement' type='number'></label>
     <button type='submit'>Submit Measurement</button>
   </form>
 </template>
